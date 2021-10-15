@@ -31,6 +31,7 @@ const main = (event) => {
 
 document.addEventListener('keyup', main)
 document.addEventListener('click', main)
+document.addEventListener('touchstart', main)
 
 const getLastCmdLine = () => {
     let cmdline = document.querySelectorAll('.cmdline')
