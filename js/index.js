@@ -1,6 +1,6 @@
 const cmdConsole = document.querySelector('.console')
 
-document.addEventListener('keyup', (event) => {
+const main = (event) => {
 
     let cursor = document.querySelector('.cursor')
     let cmdline = getLastCmdLine()
@@ -27,7 +27,10 @@ document.addEventListener('keyup', (event) => {
         }
     }
     scrollDown()
-})
+}
+
+document.addEventListener('keyup', main)
+document.addEventListener('click', main)
 
 const getLastCmdLine = () => {
     let cmdline = document.querySelectorAll('.cmdline')
