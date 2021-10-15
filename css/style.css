@@ -1,0 +1,42 @@
+body {
+    color: white;
+    background-color: black;
+    font-family: Consolas, monaco, monospace; 
+}
+
+p {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.console {
+    width: 97vw;
+    height: 95vh;
+    margin: auto;
+    padding: 5px;
+    border: 1px solid #79FE0C;
+    overflow-y: hidden;
+}
+
+.prompt {
+    display: inline-flex;
+}
+
+.cmdline {
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.cursor {
+    font-weight: bolder;
+    animation: 1.25s blink step-end infinite;
+}
+
+@keyframes blink {
+    from, to {
+        color: transparent;
+      }
+      50% {
+        color: white;
+      }
+}
