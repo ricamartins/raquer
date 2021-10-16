@@ -6,14 +6,14 @@ const main = (event) => {
     let cmdline = getLastCmdLine()
 
     if (currentCommand.command) {
-
-        cmdline.innerHTML += currentCommand.nextChar()
         
         if (currentCommand.isCompleted()) {
             cursor.remove()
             cmdConsole.innerHTML += currentCommand.result
             cmdConsole.innerHTML += newCommandConsole
             currentCommand.reset()
+        } else {
+            cmdline.innerHTML += currentCommand.nextChar()
         }
 
     } else {
