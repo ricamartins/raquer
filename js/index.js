@@ -29,7 +29,7 @@ const main = (event) => {
     scrollDown()
 }
 
-document.addEventListener('keyup', main)
+document.addEventListener('keydown', main)
 document.addEventListener('click', main)
 document.addEventListener('touchstart', main)
 
