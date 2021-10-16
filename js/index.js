@@ -22,8 +22,7 @@ const main = (event) => {
             cursor.remove()
             cmdConsole.innerHTML += newCommandConsole
         } else {
-            let cmd = commands[randomInt(commands.length)]
-            currentCommand.update(cmd)
+            currentCommand.update(randomCommand())
             cmdline.innerHTML += currentCommand.nextChar()
         }
     }
@@ -43,7 +42,5 @@ const getLastPrompt = () => {
     let cmdline = document.querySelectorAll('.prompt')
     return cmdline[cmdline.length - 1]
 }
-
-const randomInt = (max) => Math.floor(Math.random() * max)
 
 const scrollDown = () => cmdConsole.scrollTo(0, cmdConsole.scrollHeight)

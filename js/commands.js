@@ -25,6 +25,10 @@ const commands = [
     }
 ]
 
+const randomInt = (max) => Math.floor(Math.random() * max)
+
+const randomCommand = () => commands[randomInt(commands.length)]
+
 const newCommandConsole = `
     <br>
     <span class="prompt">
