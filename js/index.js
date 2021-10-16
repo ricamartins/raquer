@@ -24,6 +24,7 @@ const main = (event) => {
         } else {
             let cmd = commands[randomInt(commands.length)]
             currentCommand.update(cmd)
+            cmdline.innerHTML += currentCommand.nextChar()
         }
     }
     scrollDown()
