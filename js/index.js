@@ -5,7 +5,7 @@ const main = (event) => {
         if (currentCommand.isCompleted()) {
             removeCursor()
             printToConsole(currentCommand.result)
-            printToConsole(newCommandConsole)
+            printToConsole(newCommandPrompt)
             currentCommand.reset()
         } else {
             printToCommandLine(currentCommand.nextChar())
@@ -15,7 +15,7 @@ const main = (event) => {
         
         if (event.key == 'Enter') {
             removeCursor()
-            printToConsole(newCommandConsole)
+            printToConsole(newCommandPrompt)
         } else {
             currentCommand.update(randomCommand())
             printToCommandLine(currentCommand.nextChar())

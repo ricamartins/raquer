@@ -29,7 +29,7 @@ const randomInt = (max) => Math.floor(Math.random() * max)
 
 const randomCommand = () => commands[randomInt(commands.length)]
 
-const newCommandConsole = `
+const newCommandPrompt = `
     <br>
     <span class="prompt">
         <span>C:\\Users\\Murilo> </span>
